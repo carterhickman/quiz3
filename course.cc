@@ -2,6 +2,9 @@
 	The implementation file for course.h, which describes a college
 	course.
 		John Dolan		School of EECS		Summer2013
+    // @file Course.cc
+    //	@author John Dolan
+    // @brief  Johns's course.cc file. Function implementation
 **************************************************************************/
 #include "course.h"
 #include<cstdlib>
@@ -60,11 +63,11 @@ double course::get_number_grade()const{
     if(grade == "B") return 3.0;
     if(grade == "B-") return 2.667;
     if(grade == "C+") return 2.333;
-    if(grade == "C") return 2.0; 
+    if(grade == "C") return 2.0;
     if(grade == "C-") return 1.667;
-    if(grade == "D+") return 1.333; 
+    if(grade == "D+") return 1.333;
     if(grade == "D") return 1.0;
-    if(grade == "D-") return 0.667; 
+    if(grade == "D-") return 0.667;
     if(grade == "F") return 0.0;
     else return 0;
 }

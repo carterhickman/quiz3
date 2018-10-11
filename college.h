@@ -1,4 +1,7 @@
 //********************
+// @file College.h
+//	@author Matthew Aberegg
+// @brief  Matthew's college.h file. Function declaration
 //Matthew Aberegg
 //Project 3
 //CS 2401

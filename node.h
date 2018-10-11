@@ -1,8 +1,11 @@
 /*************************************************************************
       This file is borrowed heavily from Main/Savitch "Data Structures and
-      Other Object Using C++," Chapter 5. It features a node class that 
+      Other Object Using C++," Chapter 5. It features a node class that
       can be used in the construction of linked lists.
                 John Dolan  		March 2009
+                // @file node.h
+                //	@author John Dolan
+                // @brief  Johns's node.h file. Node function declaration
 *************************************************************************/
 
 #ifndef NODE_H
@@ -23,9 +26,9 @@ class node{
 		{link_field = l;}
 
         // Accessor functions
-        value_type data() const 
+        value_type data() const
 		{return data_field;}
-        node* link() 
+        node* link()
 		{return link_field;}
 	const node* link() const
 		{return link_field;}

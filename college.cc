@@ -1,4 +1,7 @@
 //********************
+// @file College.cc
+//	@author Matthew Aberegg
+// @brief  Matthew's college.cc file. Function implementation
 //Matthew Aberegg
 //Project 3
 //CS 2401
@@ -12,12 +15,14 @@
 using namespace std;
 
 College::College(std::string s){
+	//** @brief this function is a constructor function foran object of type class:College
 	name = s;
 	head = NULL;
 }
 
 
 College::~College(){
+	//** @brief This function is the deconstructor for object of type class:College
 	node * rmptr;
 	while(head != NULL){
 		rmptr = head;
@@ -45,6 +50,7 @@ College::College(const College& other){
 }
 
 College& College::operator =(const College& other){
+	//** @brief This function sets one class:College node eqal to each other, including values of any data type  and pointers of the class
 	if(this == &other){
 		return * this;
 	}
@@ -90,11 +96,11 @@ void College::add(course& c){
 		delete previous;
 	} else if(head -> data() < c){
 		cursor = head;
-		while (cursor != NULL && cursor -> data() <= c){ 
+		while (cursor != NULL && cursor -> data() <= c){
 			previous = cursor;
 			cursor = cursor-> link();
-		}	
-		if (cursor == NULL){ 
+		}
+		if (cursor == NULL){
 			cursor = new node (c);
 			cursor -> set_link(NULL);
 			previous -> set_link(cursor);
@@ -108,7 +114,7 @@ void College::add(course& c){
 }
 
 void College::remove(std::string coursename){
-	node * previous;	
+	node * previous;
 	node * cursor;
 	if(coursename == head->data().get_course_number()){
 		cursor = head;
@@ -165,7 +171,7 @@ double College::gpa(){
 	ptr = ptr->link();
 	}
 	return (sum / hours());
-} 
+}
 
 void College::save(std::ostream& outs){
 	node * ptr;
@@ -193,11 +199,3 @@ void College::load(std::istream& ins){
 		ptr -> set_link (NULL);
   }
 }
-
-
-
-
-
-
-
-
